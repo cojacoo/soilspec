@@ -22,7 +22,7 @@ class SNVTransformer(BaseEstimator, TransformerMixin):
         with_std: Whether to scale the data (default: True)
 
     Example:
-        >>> from soilspec_pinn.preprocessing import SNVTransformer
+        >>> from soilspec.preprocessing import SNVTransformer
         >>> snv = SNVTransformer()
         >>> spectra_corrected = snv.fit_transform(spectra)
     """
@@ -93,7 +93,7 @@ class MSCTransformer(BaseEstimator, TransformerMixin):
         reference_spectrum: Reference spectrum for correction
 
     Example:
-        >>> from soilspec_pinn.preprocessing import MSCTransformer
+        >>> from soilspec.preprocessing import MSCTransformer
         >>> msc = MSCTransformer()
         >>> spectra_corrected = msc.fit_transform(spectra)
     """
@@ -176,7 +176,7 @@ class DetrendTransformer(BaseEstimator, TransformerMixin):
         degree: Degree of polynomial for detrending (1=linear, 2=quadratic, etc.)
 
     Example:
-        >>> from soilspec_pinn.preprocessing import DetrendTransformer
+        >>> from soilspec.preprocessing import DetrendTransformer
         >>> detrend = DetrendTransformer(degree=1)
         >>> spectra_corrected = detrend.fit_transform(spectra)
     """

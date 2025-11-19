@@ -14,7 +14,7 @@ class TestSNVTransformer:
 
     def test_snv_basic(self):
         """Test basic SNV transformation."""
-        from soilspec_pinn.preprocessing import SNVTransformer
+        from soilspec.preprocessing import SNVTransformer
 
         # Create test data
         X = np.array([[1, 2, 3, 4, 5], [2, 4, 6, 8, 10], [3, 3, 3, 3, 3]])
@@ -31,7 +31,7 @@ class TestSNVTransformer:
 
     def test_snv_without_mean(self):
         """Test SNV without centering."""
-        from soilspec_pinn.preprocessing import SNVTransformer
+        from soilspec.preprocessing import SNVTransformer
 
         X = np.array([[1, 2, 3, 4, 5]])
 
@@ -47,7 +47,7 @@ class TestMSCTransformer:
 
     def test_msc_basic(self):
         """Test basic MSC transformation."""
-        from soilspec_pinn.preprocessing import MSCTransformer
+        from soilspec.preprocessing import MSCTransformer
 
         # Create test data with scatter effects
         reference = np.array([1, 2, 3, 4, 5])
@@ -71,7 +71,7 @@ class TestDetrendTransformer:
 
     def test_detrend_linear(self):
         """Test linear detrending."""
-        from soilspec_pinn.preprocessing import DetrendTransformer
+        from soilspec.preprocessing import DetrendTransformer
 
         # Create spectrum with linear baseline
         x = np.arange(100)
@@ -91,7 +91,7 @@ class TestPipelineIntegration:
 
     def test_pipeline_creation(self):
         """Test creating a preprocessing pipeline."""
-        from soilspec_pinn.preprocessing import SNVTransformer, MSCTransformer
+        from soilspec.preprocessing import SNVTransformer, MSCTransformer
 
         pipeline = Pipeline([("snv", SNVTransformer()), ("msc", MSCTransformer())])
 
@@ -100,7 +100,7 @@ class TestPipelineIntegration:
 
     def test_pipeline_transform(self):
         """Test transforming data through a pipeline."""
-        from soilspec_pinn.preprocessing import SNVTransformer
+        from soilspec.preprocessing import SNVTransformer
 
         X = np.random.rand(10, 100)
 

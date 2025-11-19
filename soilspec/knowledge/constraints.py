@@ -17,7 +17,7 @@ class ChemicalConstraints:
     Used for regularization in multi-task learning and validation of predictions.
 
     Example:
-        >>> from soilspec_pinn.knowledge import ChemicalConstraints
+        >>> from soilspec.knowledge import ChemicalConstraints
         >>> constraints = ChemicalConstraints()
         >>> expected_cec = constraints.cec_constraint(soc=2.5, clay=25)
         >>> validation = constraints.validate_prediction({'SOC': 2.5, 'clay': 25})

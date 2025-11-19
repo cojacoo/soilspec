@@ -4,7 +4,7 @@ Tests for spectral band database parser.
 
 import pytest
 import numpy as np
-from soilspec_pinn.knowledge import SpectralBandDatabase
+from soilspec.knowledge import SpectralBandDatabase
 
 
 def test_load_database():

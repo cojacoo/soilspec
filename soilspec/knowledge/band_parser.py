@@ -19,7 +19,7 @@ class SpectralBandDatabase:
     including Margenot et al., Tinti et al., Soriano-Disla et al., and others.
 
     Example:
-        >>> from soilspec_pinn.knowledge import SpectralBandDatabase
+        >>> from soilspec.knowledge import SpectralBandDatabase
         >>> bands = SpectralBandDatabase()
         >>> organic_bands = bands.get_bands(type='org')
         >>> clay_bands = bands.get_bands(information='Clay minerals')

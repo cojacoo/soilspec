@@ -5,7 +5,7 @@ Provides access to spectral band assignments, chemical constraints,
 and visualization tools based on literature-referenced peak assignments.
 
 Example:
-    >>> from soilspec_pinn.knowledge import (
+    >>> from soilspec.knowledge import (
     ...     SpectralBandDatabase,
     ...     ChemicalConstraints,
     ...     SpectralPlotter

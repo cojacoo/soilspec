@@ -22,7 +22,7 @@ console = Console()
 @app.command()
 def version():
     """Display version information."""
-    from soilspec_pinn import __version__
+    from soilspec import __version__
 
     console.print(f"[bold green]SoilSpec-PINN[/bold green] version {__version__}")
 

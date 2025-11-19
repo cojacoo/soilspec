@@ -14,7 +14,7 @@ class TestBrukerReader:
 
     def test_bruker_reader_initialization(self):
         """Test BrukerReader can be instantiated."""
-        from soilspec_pinn.io import BrukerReader
+        from soilspec.io import BrukerReader
 
         reader = BrukerReader()
         assert reader is not None
@@ -22,7 +22,7 @@ class TestBrukerReader:
 
     def test_bruker_reader_with_options(self):
         """Test BrukerReader with different options."""
-        from soilspec_pinn.io import BrukerReader
+        from soilspec.io import BrukerReader
 
         reader = BrukerReader(prefer_absorbance=False)
         assert reader.prefer_absorbance is False
@@ -33,7 +33,7 @@ class TestSpectrum:
 
     def test_spectrum_creation(self):
         """Test creating a Spectrum object."""
-        from soilspec_pinn.io import Spectrum
+        from soilspec.io import Spectrum
 
         wavenumbers = np.linspace(600, 4000, 1000)
         intensities = np.random.rand(1000)
@@ -52,7 +52,7 @@ class TestSpectrum:
 
     def test_spectrum_validation(self):
         """Test Spectrum validation."""
-        from soilspec_pinn.io import Spectrum
+        from soilspec.io import Spectrum
 
         wavenumbers = np.linspace(600, 4000, 1000)
         intensities = np.random.rand(500)  # Wrong length
@@ -69,7 +69,7 @@ class TestConverters:
 
     def test_convert_to_absorbance_from_reflectance(self):
         """Test converting reflectance to absorbance."""
-        from soilspec_pinn.io import convert_to_absorbance
+        from soilspec.io import convert_to_absorbance
 
         reflectance = np.array([0.5, 0.3, 0.7])
         absorbance = convert_to_absorbance(reflectance, input_type="reflectance")
@@ -80,7 +80,7 @@ class TestConverters:
 
     def test_convert_to_reflectance_from_absorbance(self):
         """Test converting absorbance to reflectance."""
-        from soilspec_pinn.io import convert_to_reflectance
+        from soilspec.io import convert_to_reflectance
 
         absorbance = np.array([0.3, 0.5, 0.2])
         reflectance = convert_to_reflectance(absorbance, input_type="absorbance")
@@ -91,7 +91,7 @@ class TestConverters:
 
     def test_conversion_round_trip(self):
         """Test that converting back and forth preserves data."""
-        from soilspec_pinn.io import convert_to_absorbance, convert_to_reflectance
+        from soilspec.io import convert_to_absorbance, convert_to_reflectance
 
         original_reflectance = np.array([0.5, 0.3, 0.7])
 

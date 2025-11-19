@@ -5,8 +5,8 @@ Provides unified prediction interface with support for ensemble,
 conformal, and dropout-based uncertainty quantification.
 """
 
-from soilspec_pinn.prediction.predictor import SpectralPredictor
-from soilspec_pinn.prediction.uncertainty import (
+from soilspec.prediction.predictor import SpectralPredictor
+from soilspec.prediction.uncertainty import (
     EnsembleUncertainty,
     ConformalPrediction,
     DropoutUncertainty,

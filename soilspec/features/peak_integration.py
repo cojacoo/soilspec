@@ -22,7 +22,7 @@ class PeakIntegrator(BaseEstimator, TransformerMixin):
     Reduces dimensionality from ~1800 wavelengths to ~50-100 chemical features.
 
     Example:
-        >>> from soilspec_pinn.features import PeakIntegrator
+        >>> from soilspec.features import PeakIntegrator
         >>> integrator = PeakIntegrator()
         >>> wavenumbers = np.arange(600, 4001, 2)
         >>> # Fit with wavenumbers
@@ -266,7 +266,7 @@ class PeakHeightExtractor(BaseEstimator, TransformerMixin):
     integrating over regions.
 
     Example:
-        >>> from soilspec_pinn.features import PeakHeightExtractor
+        >>> from soilspec.features import PeakHeightExtractor
         >>> # Extract heights at key wavenumbers
         >>> extractor = PeakHeightExtractor(
         ...     peak_wavenumbers=[2920, 1630, 1030, 3620]

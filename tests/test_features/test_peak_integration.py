@@ -4,7 +4,7 @@ Tests for peak integration feature extraction.
 
 import pytest
 import numpy as np
-from soilspec_pinn.features import PeakIntegrator, PhysicsInformedFeatures
+from soilspec.features import PeakIntegrator, PhysicsInformedFeatures
 
 
 @pytest.fixture

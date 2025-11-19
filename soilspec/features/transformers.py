@@ -22,7 +22,7 @@ class PhysicsInformedFeatures(BaseEstimator, TransformerMixin):
     This is a convenience class for quickly extracting all domain-knowledge features.
 
     Example:
-        >>> from soilspec_pinn.features import PhysicsInformedFeatures
+        >>> from soilspec.features import PhysicsInformedFeatures
         >>> from sklearn.preprocessing import StandardScaler
         >>> from sklearn.cross_decomposition import PLSRegression
         >>> from sklearn.pipeline import Pipeline
@@ -217,7 +217,7 @@ class CompactFeatures(BaseEstimator, TransformerMixin):
     with minimal feature set (~10-20 features).
 
     Example:
-        >>> from soilspec_pinn.features import CompactFeatures
+        >>> from soilspec.features import CompactFeatures
         >>> compact = CompactFeatures()
         >>> compact.fit(spectra, wavenumbers=wavenumbers)
         >>> features = compact.transform(spectra)
@@ -282,7 +282,7 @@ class ExtensiveFeatures(BaseEstimator, TransformerMixin):
     Best for large datasets where overfitting is less of a concern.
 
     Example:
-        >>> from soilspec_pinn.features import ExtensiveFeatures
+        >>> from soilspec.features import ExtensiveFeatures
         >>> extensive = ExtensiveFeatures()
         >>> extensive.fit(spectra, wavenumbers=wavenumbers)
         >>> features = extensive.transform(spectra)

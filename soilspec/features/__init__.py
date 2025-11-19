@@ -5,7 +5,7 @@ Provides tools to extract chemically meaningful features from soil spectra
 based on domain knowledge from spectral_bands.csv.
 
 Example:
-    >>> from soilspec_pinn.features import PhysicsInformedFeatures
+    >>> from soilspec.features import PhysicsInformedFeatures
     >>> from sklearn.preprocessing import StandardScaler
     >>> from sklearn.cross_decomposition import PLSRegression
     >>> from sklearn.pipeline import Pipeline

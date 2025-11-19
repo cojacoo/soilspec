@@ -20,7 +20,7 @@ class SpectralRatios(BaseEstimator, TransformerMixin):
     mineraology, and other properties.
 
     Example:
-        >>> from soilspec_pinn.features import PeakIntegrator, SpectralRatios
+        >>> from soilspec.features import PeakIntegrator, SpectralRatios
         >>> from sklearn.pipeline import Pipeline
         >>> # Chain with PeakIntegrator
         >>> pipeline = Pipeline([
@@ -275,7 +275,7 @@ class SpectralIndices(BaseEstimator, TransformerMixin):
     that normalize for intensity variations.
 
     Example:
-        >>> from soilspec_pinn.features import SpectralIndices
+        >>> from soilspec.features import SpectralIndices
         >>> indices = SpectralIndices(indices=['OMNI', 'CMI'])
         >>> indices.fit(spectra, wavenumbers=wavenumbers)
         >>> index_features = indices.transform(spectra)

@@ -18,7 +18,7 @@ class SpectralPlotter:
     Create annotated spectral plots using band assignments.
 
     Example:
-        >>> from soilspec_pinn.knowledge import SpectralPlotter
+        >>> from soilspec.knowledge import SpectralPlotter
         >>> plotter = SpectralPlotter()
         >>> fig = plotter.plot_spectrum_with_bands(
         ...     wavenumbers, spectrum, title="Sample soil spectrum"
@@ -375,7 +375,7 @@ def plot_band_summary(spectral_bands_csv: Optional[str] = None) -> plt.Figure:
         Matplotlib figure
 
     Example:
-        >>> from soilspec_pinn.knowledge import plot_band_summary
+        >>> from soilspec.knowledge import plot_band_summary
         >>> fig = plot_band_summary()
         >>> plt.show()
     """

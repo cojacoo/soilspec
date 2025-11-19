@@ -5,10 +5,10 @@ Provides generic trainers, PINN-specific training loops,
 callbacks, and evaluation metrics.
 """
 
-from soilspec_pinn.training.trainer import GenericTrainer
-from soilspec_pinn.training.pinn_trainer import PINNTrainer
-from soilspec_pinn.training.callbacks import EarlyStopping, ModelCheckpoint, LRScheduler
-from soilspec_pinn.training.metrics import RMSE, R2Score, RPD, RPIQ
+from soilspec.training.trainer import GenericTrainer
+from soilspec.training.pinn_trainer import PINNTrainer
+from soilspec.training.callbacks import EarlyStopping, ModelCheckpoint, LRScheduler
+from soilspec.training.metrics import RMSE, R2Score, RPD, RPIQ
 
 __all__ = [
     "GenericTrainer",
