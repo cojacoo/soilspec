@@ -3,22 +3,42 @@ Spectral preprocessing module.
 
 Provides scikit-learn compatible transformers for baseline correction,
 derivatives, smoothing, and other spectral preprocessing operations.
+
+All transformers wrap scipy/pywavelets for proven signal processing.
 """
 
-from soilspec.preprocessing.baseline import SNVTransformer, MSCTransformer
-from soilspec.preprocessing.derivatives import SavitzkyGolayDerivative
-from soilspec.preprocessing.smoothing import WaveletDenoise, SavGolSmooth
-from soilspec.preprocessing.transforms import ToAbsorbance, SpectralResample, TrimTransformer
-from soilspec.preprocessing.pipeline import create_preprocessing_pipeline
+from soilspec.preprocessing.baseline import (
+    SNVTransformer,
+    MSCTransformer,
+    DetrendTransformer,
+)
+from soilspec.preprocessing.derivatives import (
+    SavitzkyGolayDerivative,
+    GapSegmentDerivative,
+)
+from soilspec.preprocessing.smoothing import (
+    SavitzkyGolaySmoother,
+    WaveletDenoiser,
+    MovingAverageSmoother,
+)
+from soilspec.preprocessing.resample import (
+    SpectralResample,
+    TrimSpectrum,
+)
 
 __all__ = [
+    # Baseline correction
     "SNVTransformer",
     "MSCTransformer",
+    "DetrendTransformer",
+    # Derivatives
     "SavitzkyGolayDerivative",
-    "WaveletDenoise",
-    "SavGolSmooth",
-    "ToAbsorbance",
+    "GapSegmentDerivative",
+    # Smoothing
+    "SavitzkyGolaySmoother",
+    "WaveletDenoiser",
+    "MovingAverageSmoother",
+    # Resampling
     "SpectralResample",
-    "TrimTransformer",
-    "create_preprocessing_pipeline",
+    "TrimSpectrum",
 ]
