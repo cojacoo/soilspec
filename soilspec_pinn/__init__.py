@@ -1,9 +1,12 @@
 """
-SoilSpec-PINN: Physics-Informed Neural Networks for Soil Spectroscopy
+SoilSpec: Evidence-Based Soil Spectroscopy Package
 
 A comprehensive Python package for analyzing soil mid-infrared spectra using
-physics-informed neural networks (PINNs), message passing neural networks (MPNNs),
-and traditional machine learning methods.
+domain knowledge (spectral_bands.csv), traditional chemometrics (PLS, MBL, Cubist),
+and interpretable deep learning with physics-guided attention.
+
+Combines 150+ literature-referenced peak assignments with modern machine learning
+for accurate, interpretable soil property prediction.
 """
 
 __version__ = "0.1.0"
@@ -13,6 +16,8 @@ __email__ = "your.email@example.com"
 from soilspec_pinn import (
     io,
     preprocessing,
+    knowledge,
+    features,
     models,
     training,
     prediction,
@@ -24,6 +29,8 @@ from soilspec_pinn import (
 __all__ = [
     "io",
     "preprocessing",
+    "knowledge",
+    "features",
     "models",
     "training",
     "prediction",
