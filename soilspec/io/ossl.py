@@ -1,14 +1,52 @@
 """
 OSSL (Open Soil Spectral Library) format handlers.
 
-Provides readers for OSSL dataset formats and interfaces
-to OSSL pre-trained models.
+**DEPRECATION WARNING:** This module is deprecated and will be removed in v0.2.0.
+
+**Use soilspec.datasets.OSSLDataset instead** which provides:
+* Automatic download and caching via soilspecdata package
+* Aligned spectra + soil properties (no manual CSV handling)
+* Train/val/test splitting with stratification
+* Better error handling and validation
+
+Example Migration
+-----------------
+**OLD (io/ossl.py - DEPRECATED):**
+
+>>> from soilspec.io.ossl import OSSLReader
+>>> reader = OSSLReader()
+>>> df = reader.load_spectra("ossl_mir_data.csv")  # Manual CSV loading
+
+**NEW (datasets.OSSLDataset - RECOMMENDED):**
+
+>>> from soilspec.datasets import OSSLDataset
+>>> ossl = OSSLDataset()
+>>> X, y, ids = ossl.load_mir(target='soc')  # Automatic download + alignment
+>>> X_train, X_test, y_train, y_test = ossl.split_dataset(X, y, ids, test_size=0.2)
+
+See soilspec.datasets.OSSLDataset for full documentation.
+
+References
+----------
+Albinet, F. et al. (2024). soilspecdata: Python package for accessing soil
+spectral libraries. https://github.com/franckalbinet/soilspecdata
 """
 
 from pathlib import Path
 from typing import Dict, List, Optional, Union
 import numpy as np
 import pandas as pd
+import warnings
+
+# Show deprecation warning when module is imported
+warnings.warn(
+    "soilspec.io.ossl is deprecated and will be removed in v0.2.0. "
+    "Use soilspec.datasets.OSSLDataset instead for automatic OSSL data access "
+    "with download, caching, and alignment. "
+    "See: https://github.com/franckalbinet/soilspecdata",
+    DeprecationWarning,
+    stacklevel=2
+)
 
 
 class OSSLReader:
