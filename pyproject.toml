@@ -51,12 +51,15 @@ deep-learning = [
     "torch>=2.0.0",
     "lightning>=2.0.0",
 ]
+data = [
+    "soilspecdata>=0.1.0",
+]
 mlops = [
     "mlflow>=2.8.0",
     "wandb>=0.15.0",
 ]
 all = [
-    "soilspec[dev,deep-learning,mlops]",
+    "soilspec[dev,deep-learning,data,mlops]",
 ]
 
 [project.urls]
